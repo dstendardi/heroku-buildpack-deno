@@ -12,7 +12,15 @@ HEROKU_DIR=$BUILD_DIR/.heroku
 BIN_DIR=$HEROKU_DIR/bin
 
 # To enable the local source build cache path, copy the files and match the build path with the startup path.
-cp -rpT $BUILD_DIR $HOME
+#cp -rpT $BUILD_DIR $HOME
+cp -r $BUILD_DIR/Procfile $HOME/.
+cp -r $BUILD_DIR/client.tsx $HOME/.
+cp -r $BUILD_DIR/components $HOME/.
+cp -r $BUILD_DIR/public $HOME/.
+cp -r $BUILD_DIR/server.tsx $HOME/.
+cp -r $BUILD_DIR/services $HOME/.
+cp -r $BUILD_DIR/views $HOME/.
+
 cd $HOME
 
 if [ -f runtime.txt ]
